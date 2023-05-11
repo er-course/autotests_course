@@ -5,6 +5,7 @@ def modification(lst):
     lst.insert(-1, lst[0])
     lst.insert(0, lst[-1])
     del (lst[1], lst[-1])
+
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
