@@ -46,6 +46,8 @@ def func_log(file_log='log.txt'):
             with open(file_log, "a", encoding='utf-8') as logger:
                 logger.write(f'{func.__name__} вызвана {start_date.strftime("%d.%m %H:%M:%S")}\n')
             func()
+            wrapper.__doc__ = func.__doc__
+            wrapper.__name__ = func.__name__
         return wrapper
     return log
 
